@@ -1,11 +1,9 @@
 islemler = input("Islem turunu seciniz = (+, -, *, /, **, //, %)")
-ne_kadar = int(input("Kaç tane sayiyla bi işlem yapmak istiyorsunuz? = "))
+sayimiktar = input("Kac tane sayi girmek istersiniz? = ")
 sayilar = []
-
-for i in range(ne_kadar):
+for i in range(sayimiktar):
     sayi = int(input("Sayi giriniz = "))
     sayilar.append(sayi)
-
 def topla(sayilar):
     sonuc = 0
     for sayi in sayilar:
