@@ -40,3 +40,13 @@ def bölme(sayilar):
             print("Sifira bölme hatasi!")
             return None
     return sonuc
+
+def tam_bölme(sayilar):
+    sonuc = sayilar[0]
+    for sayi in sayilar[1:]:
+        if sayi != 0:
+            sonuc //= sayi
+        else:
+            print("Sifira bölme hatasi!")
+            return None
+    return sonuc
