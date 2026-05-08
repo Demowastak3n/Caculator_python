@@ -31,7 +31,7 @@ def MOD(sayilar):
         sonuc %= sayi
     return sonuc
 
-def bölme(sayilar):
+def bolme(sayilar):
     sonuc = sayilar[0]
     for sayi in sayilar[1:]:
         if sayi != 0:
@@ -41,7 +41,13 @@ def bölme(sayilar):
             return None
     return sonuc
 
-def tam_bölme(sayilar):
+def USal(sayilar):
+    sonuc = sayilar[0]
+    for sayi in sayilar[1:]:
+        sonuc **= sayi
+    return sonuc
+
+def tambolme(sayilar):
     sonuc = sayilar[0]
     for sayi in sayilar[1:]:
         if sayi != 0:
@@ -50,3 +56,27 @@ def tam_bölme(sayilar):
             print("Sifira bölme hatasi!")
             return None
     return sonuc
+
+if topla(sayilar):
+    print(topla(sayilar))
+
+elif cikar(sayilar):
+    print(cikar(sayilar))
+
+elif carp(sayilar):
+    print(carp(sayilar))
+
+elif MOD(sayilar):
+    print(MOD(sayilar))
+
+elif bolme(sayilar):
+    print(bolme(sayilar))
+
+elif USal(sayilar):
+    print(USal(sayilar))
+    
+elif(tambolme(sayilar)):
+    print(tambolme(sayilar))
+    
+else:
+    print("Baska islem turu kalmadi amca")
