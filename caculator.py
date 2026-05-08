@@ -1,3 +1,4 @@
+""""
 islemler = input("Islem turunu seciniz = (+, -, *, /, **, //, %) ")
 sayimiktar = int(input("Kac tane sayi girmek istersiniz? = "))
 
@@ -7,11 +8,13 @@ for i in range(sayimiktar):
     sayi = int(input("Sayi giriniz = "))
     sayilar.append(sayi)
 
+
 def topla(sayilar):
     sonuc = sayilar[0]
     for sayi in sayilar[1:]:
         sonuc += sayi
     return sonuc
+
 
 def cikar(sayilar):
     sonuc = sayilar[0]
@@ -19,17 +22,20 @@ def cikar(sayilar):
         sonuc -= sayi
     return sonuc
 
+
 def carp(sayilar):
     sonuc = sayilar[0]
     for sayi in sayilar[1:]:
         sonuc *= sayi
     return sonuc
 
+
 def MOD(sayilar):
     sonuc = sayilar[0]
     for sayi in sayilar[1:]:
         sonuc %= sayi
     return sonuc
+
 
 def bolme(sayilar):
     sonuc = sayilar[0]
@@ -41,11 +47,13 @@ def bolme(sayilar):
             return None
     return sonuc
 
+
 def USal(sayilar):
     sonuc = sayilar[0]
     for sayi in sayilar[1:]:
         sonuc **= sayi
     return sonuc
+
 
 def tambolme(sayilar):
     sonuc = sayilar[0]
@@ -56,6 +64,7 @@ def tambolme(sayilar):
             print("Sifira bölme hatasi!")
             return None
     return sonuc
+
 
 if islemler == "+":
     print(topla(sayilar))
@@ -77,6 +86,7 @@ elif islemler == "**":
 
 elif islemler == "//":
     print(tambolme(sayilar))
-    
+
 else:
     print("Baska islem turu kalmadi amca")
+    """
