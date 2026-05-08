@@ -1,4 +1,4 @@
-iislemler = input("Islem turunu seciniz = (+, -, *, /, **, //, %) ")
+islemler = input("Islem turunu seciniz = (+, -, *, /, **, //, %) ")
 sayimiktar = int(input("Kac tane sayi girmek istersiniz? = "))
 
 sayilar = []
@@ -57,25 +57,25 @@ def tambolme(sayilar):
             return None
     return sonuc
 
-if topla(sayilar):
+if islemler == "+":
     print(topla(sayilar))
 
-elif cikar(sayilar):
+elif islemler == "-":
     print(cikar(sayilar))
 
-elif carp(sayilar):
+elif islemler == "*":
     print(carp(sayilar))
 
-elif MOD(sayilar):
+elif islemler == "%":
     print(MOD(sayilar))
 
-elif bolme(sayilar):
+elif islemler == "/":
     print(bolme(sayilar))
 
-elif USal(sayilar):
+elif islemler == "**":
     print(USal(sayilar))
-    
-elif(tambolme(sayilar)):
+
+elif islemler == "//":
     print(tambolme(sayilar))
     
 else:
