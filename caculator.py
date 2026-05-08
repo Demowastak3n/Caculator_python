@@ -13,4 +13,13 @@ def topla(sayilar):
         sonuc += sayi
     return sonuc
 
-print(topla(sayilar))
+def cikar(sayilar):
+    sonuc = sayilar[0]
+    for sayi in sayilar[1:]:
+        sonuc -= sayi
+    return sonuc
+
+if islemler == "+":
+    print("Toplam = ", topla(sayilar))
+elif islemler == "-":
+    print("Fark = ", cikar(sayilar))
