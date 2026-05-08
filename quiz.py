@@ -48,17 +48,16 @@ else:
     skor -= 5
 
 soru5 = input("Dunyanin capi yaklasik olarak kac kmdir? = ")
-     if soru5 == "13000Km" or "13 000 Km":
-            print("Cevap dogru")
-            d += 1
-            skor += 10
+if soru5 == "13000Km" or "13 000 Km":
+    print("Cevap dogru")
+    d += 1
+    skor += 10
 
-        elif soru5 == "13000km" or "13 000 km":
-            print("Cevap dogru")
-            d += 1
-            skor += 10
-
-        else:
-            print("Cevap yanlis")
-            y += 1
-            skor -= 5
+elif soru5 == "13000km" or "13 000 km":
+    print("Cevap dogru")
+    d += 1
+    skor += 10
+else:
+    print("Cevap yanlis")
+    y += 1
+    skor -= 5
