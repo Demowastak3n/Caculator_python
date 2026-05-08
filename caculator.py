@@ -30,3 +30,13 @@ def MOD(sayilar):
     for sayi in sayilar[1:]:
         sonuc %= sayi
     return sonuc
+
+def bölme(sayilar):
+    sonuc = sayilar[0]
+    for sayi in sayilar[1:]:
+        if sayi != 0:
+            sonuc /= sayi
+        else:
+            print("Sifira bölme hatasi!")
+            return None
+    return sonuc
