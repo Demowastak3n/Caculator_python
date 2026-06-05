@@ -1,1 +1,13 @@
 
+orgenci = {
+
+    "Isim": "x",
+    "Sinav Notu 1": "y",
+    "Sinav Notu 2": "z",
+    "Sozlu Notu": "a",
+}
+
+ogrenci{"x"} = input("Ogrenci adini giriniz = ")
+ogrenci{"y"} = float(input("Ilk Sinav Notunu giriniz = "))
+ogrenci{"z"} = float(input("Ikinci Sinav Notunu giriniz = "))
+ogrenci{"a"} = float(input("Sozlu Notunu giriniz = "))
