@@ -13,7 +13,7 @@ ogrenci["Sinif"] = int(input("Ogrencinin kacinci Sinif oldugunugiriniz = "))
 dersler = [ ]
 
 def Mat():
-
+    
     Mat = {
 
         "Birinci Sinav Notu": 0,
@@ -27,7 +27,7 @@ def Mat():
     Mat["Sozlu  Notu"] = int(input("Sozlu Notu = "))
 
 def Turk():
-
+    
     Turk = {
         "Birinci Sinav Notu": 0,
         "Ikinci Sinav Notu": 0,
@@ -37,7 +37,7 @@ def Turk():
     Turk["Birinci Sinav Notu"] = int(input("Birinci Sinav Notu = "))
     Turk["Ikinci Sinav Notu"] = int(input("Ikinci Sinav Notu = "))
     Turk["Sozlu  Notu"] = int(input("Sozlu Notu = "))
-    
+
 def Fen():
 
     Fen = {
@@ -63,3 +63,19 @@ def Ing():
     Ing["Birinci Sinav Notu"] = int(input("Birinci Sinav Notu = "))
     Ing["Ikinci Sinav Notu"] = int(input("Ikinci Sinav Notu = "))
     Ing["Sozlu  Notu"] = int(input("Sozlu Notu = "))
+
+ders_saati = {
+    "Mat": 6,
+    "Turk": 4,
+    "Fen": 4,
+    "İngilizce": 3,
+}
+
+def ort():
+    secim = input("Hangi dersin ortalamasini hesaplamak istiyorsunuz?")
+    Mat_ort = ((Mat["Birinci Sinav Notu"] * 2) + (Mat["Ikinci Sinav Notu"] * 2) + Mat["Sozlu  Notu"]) / 5
+    Turk_ort = ((Turk["Birinci Sinav Notu"] * 2) + (Turk["Ikinci Sinav Notu"] * 2) + Turk["Sozlu  Notu"]) / 5
+    Fen_ort = ((Fen["Birinci Sinav Notu"] * 2) + (Fen["Ikinci Sinav Notu"] * 2) + Fen["Sozlu  Notu"]) / 5
+    Ing_ort = ((Ing["Birinci Sinav Notu"] * 2) + (Ing["Ikinci Sinav Notu"] * 2) + Ing["Sozlu  Notu"]) / 5
+
+   
