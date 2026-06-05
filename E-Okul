@@ -1,13 +1,11 @@
-
-orgenci = {
-
-    "Isim": "x",
-    "Sinav Notu 1": "y",
-    "Sinav Notu 2": "z",
-    "Sozlu Notu": "a",
+ogrenci = {
+    "Isim": "",
+    "Sinav Notu 1": 0,
+    "Sinav Notu 2": 0,
+    "Sozlu Notu": 0
 }
 
-ogrenci{"x"} = input("Ogrenci adini giriniz = ")
-ogrenci{"y"} = float(input("Ilk Sinav Notunu giriniz = "))
-ogrenci{"z"} = float(input("Ikinci Sinav Notunu giriniz = "))
-ogrenci{"a"} = float(input("Sozlu Notunu giriniz = "))
+ogrenci["Isim"] = input("Ogrenci adini giriniz = ")
+ogrenci["Sinav Notu 1"] = float(input("Ilk Sinav Notunu giriniz = "))
+ogrenci["Sinav Notu 2"] = float(input("Ikinci Sinav Notunu giriniz = "))
+ogrenci["Sozlu Notu"] = float(input("Sozlu Notunu giriniz = "))
