@@ -61,14 +61,33 @@ def TAMBol(sayilar):
             return None
     return sonuc
 
+def karekok(sayi):
+    return sayi ** 0.5
+
 
 Devam = True
 
 while Devam:
 
-    islemler = input("İşlem türünü seçiniz (+, -, *, /, **, //, %) : ")
-    sayimiktar = int(input("Sayı miktarını giriniz: "))
-
+    while True:
+        islemler = input("Islem turunu seciniz = (+, -, *, /, **, //, %, karekök, q, e) " )
+        if islemler in ("+", "-", "*", "/", "**", "//", "%", "karekök", "q", "e"):
+            break
+        else:
+            print("Gecersiz islem turu, tekrar deneyiniz.")
+            
+    if islemler == "karekök":
+            sayimiktar = 1
+    else:
+        while True:
+            try:
+                sayimiktar = int(input("Kac sayi gireceksiniz? "))
+                if sayimiktar > 0:
+                    break
+                else:
+                    print("Lütfen pozitif bir sayı giriniz.")
+            except ValueError:
+                print("Lütfen geçerli bir sayı giriniz.")
     sayilar = []
 
     for i in range(sayimiktar):
@@ -95,6 +114,11 @@ while Devam:
 
     elif islemler == "//":
         print("Cevap =", TAMBol(sayilar))
+        
+    elif islemler == "karekök":
+            print("Cevap = ", karekok(sayilar[0]))
+            time.sleep(0.5)
+            print("Devam mi yeter mi? q yeter ve e devam anlamina gelir")
 
     else:
         print("Geçersiz işlem seçtiniz!")
@@ -107,3 +131,4 @@ while Devam:
         Devam = False
 
 print("Program sonlandırıldı.")
+
