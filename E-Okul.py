@@ -65,7 +65,7 @@ def Ing():
     Ing["Sozlu  Notu"] = int(input("Sozlu Notu = "))
 
 def ort():
-    secim = input("Hangi dersin ortalamasini hesaplamak istiyorsunuz? = ")
+    secim = input("Hangi dersin ortalamasini hesaplamak istiyorsunuz? (Mat, Turk, Fen, Ing, Genel) = ")
     
     Mat_ort = ((Mat["Birinci Sinav Notu"] * 2) + (Mat["Ikinci Sinav Notu"] * 2) + Mat["Sozlu  Notu"]) / 5
     
@@ -76,3 +76,18 @@ def ort():
     Ing_ort = ((Ing["Birinci Sinav Notu"] * 2) + (Ing["Ikinci Sinav Notu"] * 2) + Ing["Sozlu  Notu"]) / 5
     
     Ort = ((Mat_ort * 3) + (Turk_ort * 2) + (Fen_ort * 2) + (Ing_ort * 1)) / 8
+
+    if secim == "Mat":
+        print(f"Matematik Ortalamaniz = {Mat_ort}")
+    elif secim == "Turk":
+        print(f"Turkce Ortalamaniz = {Turk_ort}")
+    elif secim == "Fen":
+        print(f"Fen Ortalamaniz = {Fen_ort}")
+    elif secim == "Ing":
+        print(f"Ingilizce Ortalamaniz = {Ing_ort}")
+    elif secim == "Genel":
+        print(f"Genel Ortalamaniz = {Ort}")
+    else:
+        print("Gecersiz secim, lutfen tekrar deneyiniz.")
+        ort()
+
