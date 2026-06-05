@@ -71,7 +71,7 @@ while Devam:
 
     while True:
         islemler = input("Islem turunu seciniz = (+, -, *, /, **, //, %, karekok, q, e) " )
-        if islemler in ("+", "-", "*", "/", "**", "//", "%", "karekök", "q", "e"):
+        if islemler in ("+", "-", "*", "/", "**", "//", "%", "karekok", "q", "e"):
             break
         else:
             print("Gecersiz islem turu, tekrar deneyiniz.")
@@ -131,4 +131,3 @@ while Devam:
         Devam = False
 
 print("Program sonlandırıldı.")
-
