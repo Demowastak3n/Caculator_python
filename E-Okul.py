@@ -13,7 +13,7 @@ ogrenci["Sinif"] = int(input("Ogrencinin kacinci Sinif oldugunugiriniz = "))
 dersler = [ ]
 
 def Mat():
-    
+
     Mat = {
 
         "Birinci Sinav Notu": 0,
@@ -27,7 +27,7 @@ def Mat():
     Mat["Sozlu  Notu"] = int(input("Sozlu Notu = "))
 
 def Turk():
-    
+
     Turk = {
         "Birinci Sinav Notu": 0,
         "Ikinci Sinav Notu": 0,
@@ -37,3 +37,29 @@ def Turk():
     Turk["Birinci Sinav Notu"] = int(input("Birinci Sinav Notu = "))
     Turk["Ikinci Sinav Notu"] = int(input("Ikinci Sinav Notu = "))
     Turk["Sozlu  Notu"] = int(input("Sozlu Notu = "))
+    
+def Fen():
+
+    Fen = {
+
+        "Birinci Sinav Notu": 0,
+        "Ikinci Sinav Notu": 0,
+        "Sozlu Notu": 0,
+
+    }
+
+    Fen["Birinci Sinav Notu"] = int(input("Birinci Sinav Notu = "))
+    Fen["Ikinci Sinav Notu"] = int(input("Ikinci Sinav Notu = "))
+    Fen["Sozlu  Notu"] = int(input("Sozlu Notu = "))
+
+def Ing():
+
+    Ing = {
+        "Birinci Sinav Notu": 0,
+        "Ikinci Sinav Notu": 0,
+        "Sozlu Notu": 0,
+    }
+
+    Ing["Birinci Sinav Notu"] = int(input("Birinci Sinav Notu = "))
+    Ing["Ikinci Sinav Notu"] = int(input("Ikinci Sinav Notu = "))
+    Ing["Sozlu  Notu"] = int(input("Sozlu Notu = "))
