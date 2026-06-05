@@ -117,8 +117,6 @@ while Devam:
         
     elif islemler == "karekok":
             print("Cevap = ", karekok(sayilar[0]))
-            time.sleep(0.5)
-            print("Devam mi yeter mi? q yeter ve e devam anlamina gelir")
 
     else:
         print("Geçersiz işlem seçtiniz!")
