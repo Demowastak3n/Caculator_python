@@ -1,92 +1,122 @@
-""""
-islemler = input("Islem turunu seciniz = (+, -, *, /, **, //, %) ")
-sayimiktar = int(input("Kac tane sayi girmek istersiniz? = "))
+Devam = True
 
-sayilar = []
+import time
 
-for i in range(sayimiktar):
-    sayi = int(input("Sayi giriniz = "))
-    sayilar.append(sayi)
+while Devam == True:
+    islemler = input("Islem turunu seciniz = (+, -, *, /, **, //, %,q,e) " )
 
+    if islemler == "q":
+        Devam = False
+        time.sleep(0.5)
+        exit()
 
-def topla(sayilar):
-    sonuc = sayilar[0]
-    for sayi in sayilar[1:]:
-        sonuc += sayi
-    return sonuc
+    if islemler == "e":
+        repeat = True
 
+    else:
+        sayimiktar = int(input("Sayi  miktarini giriniz = "))
 
-def cikar(sayilar):
-    sonuc = sayilar[0]
-    for sayi in sayilar[1:]:
-        sonuc -= sayi
-    return sonuc
+        sayilar = []
 
-
-def carp(sayilar):
-    sonuc = sayilar[0]
-    for sayi in sayilar[1:]:
-        sonuc *= sayi
-    return sonuc
+        for i in range(sayimiktar):
+            sayi = int(input("Sayi giriniz = "))
+            sayilar.append(sayi)
 
 
-def MOD(sayilar):
-    sonuc = sayilar[0]
-    for sayi in sayilar[1:]:
-        sonuc %= sayi
-    return sonuc
+        def topla(sayilar):
+            sonuc = sayilar[0]
+            for sayi in sayilar[1:]:
+                sonuc += sayi
+            return sonuc
 
 
-def bolme(sayilar):
-    sonuc = sayilar[0]
-    for sayi in sayilar[1:]:
-        if sayi != 0:
-            sonuc /= sayi
+        def cikar(sayilar):
+            sonuc = sayilar[0]
+            for sayi in sayilar[1:]:
+                sonuc -= sayi
+            return sonuc
+
+
+        def carp(sayilar):
+            sonuc = sayilar[0]
+            for sayi in sayilar[1:]:
+                sonuc *= sayi
+            return sonuc
+
+
+        def MODal(sayilar):
+            sonuc = sayilar[0]
+            for sayi in sayilar[1:]:
+                sonuc %= sayi
+            return sonuc
+
+
+        def bol(sayilar):
+            sonuc = sayilar[0]
+            for sayi in sayilar[1:]:
+                if sayi != 0:
+                    sonuc /= sayi
+                else:
+                    print("Sifira bölme hatasi!")
+                    return None
+            return sonuc
+
+
+        def USal(sayilar):
+            sonuc = sayilar[0]
+            for sayi in sayilar[1:]:
+                sonuc **= sayi
+            return sonuc
+
+
+        def TAMBol(sayilar):
+            sonuc = sayilar[0]
+            for sayi in sayilar[1:]:
+                if sayi != 0:
+                    sonuc //= sayi
+                else:
+                    print("Sifira bölme hatasi!")
+                    return None
+            return sonuc
+
+
+        if islemler == "+":
+            print("Cevap = ", topla(sayilar))
+            time.sleep(0.5)
+            print("Devam mi yeter mi? q yeter ve e devam anlamina gelir")
+
+        elif islemler == "-":
+            print("Cevap = ", cikar(sayilar))
+            time.sleep(0.5)
+            print("Devam mi yeter mi? q yeter ve e devam anlamina gelir")
+
+        elif islemler == "*":
+            print("Cevap = ", carp(sayilar))
+            time.sleep(0.5)
+            print("Devam mi yeter mi? q yeter ve e devam anlamina gelir")
+
+        elif islemler == "/":
+            print("Cevap = ", bol(sayilar))
+            time.sleep(0.5)
+            print("Devam mi yeter mi? q yeter ve e devam anlamina gelir")
+
+        elif islemler == "%":
+            print("Cevap = ", MODal(sayilar))
+            time.sleep(0.5)
+            print("Devam mi yeter mi? q yeter ve e devam anlamina gelir")
+
+        elif islemler == "**":
+            print("Cevap = ", USal(sayilar))
+            time.sleep(0.5)
+            print("Devam mi yeter mi? q yeter ve e devam anlamina gelir")
+
+        elif islemler == "//":
+            print("Cevap = ", TAMBol(sayilar))
+            time.sleep(0.5)
+            print("Devam mi yeter mi? q yeter ve e devam anlamina gelir")
+
         else:
-            print("Sifira bölme hatasi!")
-            return None
-    return sonuc
+            print("Baska islem kalmadi ahbap")
 
-
-def USal(sayilar):
-    sonuc = sayilar[0]
-    for sayi in sayilar[1:]:
-        sonuc **= sayi
-    return sonuc
-
-
-def tambolme(sayilar):
-    sonuc = sayilar[0]
-    for sayi in sayilar[1:]:
-        if sayi != 0:
-            sonuc //= sayi
-        else:
-            print("Sifira bölme hatasi!")
-            return None
-    return sonuc
-
-
-if islemler == "+":
-    print(topla(sayilar))
-
-elif islemler == "-":
-    print(cikar(sayilar))
-
-elif islemler == "*":
-    print(carp(sayilar))
-
-elif islemler == "%":
-    print(MOD(sayilar))
-
-elif islemler == "/":
-    print(bolme(sayilar))
-
-elif islemler == "**":
-    print(USal(sayilar))
-
-elif islemler == "//":
-    print(tambolme(sayilar))
-
-else:
-    print("Baska islem turu kalmadi amca")
-    """
+        if Devam == False:
+            break
