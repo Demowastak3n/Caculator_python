@@ -1,122 +1,109 @@
-Devam = True
-
 import time
 
-while Devam == True:
-    islemler = input("Islem turunu seciniz = (+, -, *, /, **, //, %,q,e) " )
 
-    if islemler == "q":
-        Devam = False
-        time.sleep(0.5)
-        exit()
+def topla(sayilar):
+    sonuc = sayilar[0]
+    for sayi in sayilar[1:]:
+        sonuc += sayi
+    return sonuc
 
-    if islemler == "e":
-        repeat = True
+
+def cikar(sayilar):
+    sonuc = sayilar[0]
+    for sayi in sayilar[1:]:
+        sonuc -= sayi
+    return sonuc
+
+
+def carp(sayilar):
+    sonuc = sayilar[0]
+    for sayi in sayilar[1:]:
+        sonuc *= sayi
+    return sonuc
+
+
+def bol(sayilar):
+    sonuc = sayilar[0]
+    for sayi in sayilar[1:]:
+        if sayi != 0:
+            sonuc /= sayi
+        else:
+            print("Sıfıra bölme hatası!")
+            return None
+    return sonuc
+
+
+def MODal(sayilar):
+    sonuc = sayilar[0]
+    for sayi in sayilar[1:]:
+        if sayi != 0:
+            sonuc %= sayi
+        else:
+            print("Sıfıra mod alma hatası!")
+            return None
+    return sonuc
+
+
+def USal(sayilar):
+    sonuc = sayilar[0]
+    for sayi in sayilar[1:]:
+        sonuc **= sayi
+    return sonuc
+
+
+def TAMBol(sayilar):
+    sonuc = sayilar[0]
+    for sayi in sayilar[1:]:
+        if sayi != 0:
+            sonuc //= sayi
+        else:
+            print("Sıfıra bölme hatası!")
+            return None
+    return sonuc
+
+
+Devam = True
+
+while Devam:
+
+    islemler = input("İşlem türünü seçiniz (+, -, *, /, **, //, %) : ")
+    sayimiktar = int(input("Sayı miktarını giriniz: "))
+
+    sayilar = []
+
+    for i in range(sayimiktar):
+        sayi = int(input(f"{i+1}. sayıyı giriniz: "))
+        sayilar.append(sayi)
+
+    if islemler == "+":
+        print("Cevap =", topla(sayilar))
+
+    elif islemler == "-":
+        print("Cevap =", cikar(sayilar))
+
+    elif islemler == "*":
+        print("Cevap =", carp(sayilar))
+
+    elif islemler == "/":
+        print("Cevap =", bol(sayilar))
+
+    elif islemler == "%":
+        print("Cevap =", MODal(sayilar))
+
+    elif islemler == "**":
+        print("Cevap =", USal(sayilar))
+
+    elif islemler == "//":
+        print("Cevap =", TAMBol(sayilar))
 
     else:
-        sayimiktar = int(input("Sayi  miktarini giriniz = "))
+        print("Geçersiz işlem seçtiniz!")
 
-        sayilar = []
+    time.sleep(1.5)
 
-        for i in range(sayimiktar):
-            sayi = int(input("Sayi giriniz = "))
-            sayilar.append(sayi)
+    durum = input("Devam etmek için 'e', çıkmak için 'q' giriniz: ").lower()
 
+    if durum == "q":
+        Devam = False
 
-        def topla(sayilar):
-            sonuc = sayilar[0]
-            for sayi in sayilar[1:]:
-                sonuc += sayi
-            return sonuc
-
-
-        def cikar(sayilar):
-            sonuc = sayilar[0]
-            for sayi in sayilar[1:]:
-                sonuc -= sayi
-            return sonuc
-
-
-        def carp(sayilar):
-            sonuc = sayilar[0]
-            for sayi in sayilar[1:]:
-                sonuc *= sayi
-            return sonuc
-
-
-        def MODal(sayilar):
-            sonuc = sayilar[0]
-            for sayi in sayilar[1:]:
-                sonuc %= sayi
-            return sonuc
-
-
-        def bol(sayilar):
-            sonuc = sayilar[0]
-            for sayi in sayilar[1:]:
-                if sayi != 0:
-                    sonuc /= sayi
-                else:
-                    print("Sifira bölme hatasi!")
-                    return None
-            return sonuc
-
-
-        def USal(sayilar):
-            sonuc = sayilar[0]
-            for sayi in sayilar[1:]:
-                sonuc **= sayi
-            return sonuc
-
-
-        def TAMBol(sayilar):
-            sonuc = sayilar[0]
-            for sayi in sayilar[1:]:
-                if sayi != 0:
-                    sonuc //= sayi
-                else:
-                    print("Sifira bölme hatasi!")
-                    return None
-            return sonuc
-
-
-        if islemler == "+":
-            print("Cevap = ", topla(sayilar))
-            time.sleep(0.5)
-            print("Devam mi yeter mi? q yeter ve e devam anlamina gelir")
-
-        elif islemler == "-":
-            print("Cevap = ", cikar(sayilar))
-            time.sleep(0.5)
-            print("Devam mi yeter mi? q yeter ve e devam anlamina gelir")
-
-        elif islemler == "*":
-            print("Cevap = ", carp(sayilar))
-            time.sleep(0.5)
-            print("Devam mi yeter mi? q yeter ve e devam anlamina gelir")
-
-        elif islemler == "/":
-            print("Cevap = ", bol(sayilar))
-            time.sleep(0.5)
-            print("Devam mi yeter mi? q yeter ve e devam anlamina gelir")
-
-        elif islemler == "%":
-            print("Cevap = ", MODal(sayilar))
-            time.sleep(0.5)
-            print("Devam mi yeter mi? q yeter ve e devam anlamina gelir")
-
-        elif islemler == "**":
-            print("Cevap = ", USal(sayilar))
-            time.sleep(0.5)
-            print("Devam mi yeter mi? q yeter ve e devam anlamina gelir")
-
-        elif islemler == "//":
-            print("Cevap = ", TAMBol(sayilar))
-            time.sleep(0.5)
-            print("Devam mi yeter mi? q yeter ve e devam anlamina gelir")
-
-        else:
-            print("Baska islem kalmadi ahbap")
-
-        if Devam == False:
-            break
+print("Program sonlandırıldı.")
