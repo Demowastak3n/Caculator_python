@@ -8,9 +8,10 @@ ogrenci["Isim"] = input("Ogrenci adini giriniz = ")
 ogrenci["Yas"] = int(input("Ogrenci Yasini giriniz = "))
 ogrenci["Sinif"] = int(input("Ogrencinin kacinci Sinif oldugunu giriniz = "))
 
-
 def Mat():
     mat = {}
+
+    print("--Mat--")
 
     mat["Birinci Sinav Notu"] = int(input("Birinci Sinav Notu = "))
     mat["Ikinci Sinav Notu"] = int(input("Ikinci Sinav Notu = "))
@@ -18,9 +19,9 @@ def Mat():
 
     return mat
 
-
 def Turk():
     turk = {}
+    print("--Turk--")
 
     turk["Birinci Sinav Notu"] = int(input("Birinci Sinav Notu = "))
     turk["Ikinci Sinav Notu"] = int(input("Ikinci Sinav Notu = "))
@@ -28,30 +29,29 @@ def Turk():
 
     return turk
 
-
 def Fen():
     fen = {}
 
+    print("--Fen--")
     fen["Birinci Sinav Notu"] = int(input("Birinci Sinav Notu = "))
     fen["Ikinci Sinav Notu"] = int(input("Ikinci Sinav Notu = "))
     fen["Sozlu Notu"] = int(input("Sozlu Notu = "))
 
     return fen
 
-
 def Ing():
     ing = {}
 
+    print("--Ing--")
     ing["Birinci Sinav Notu"] = int(input("Birinci Sinav Notu = "))
     ing["Ikinci Sinav Notu"] = int(input("Ikinci Sinav Notu = "))
     ing["Sozlu Notu"] = int(input("Sozlu Notu = "))
 
     return ing
 
-
 def ort():
     secim = input(
-        "Hangi dersin ortalamasini hesaplamak istiyorsunuz? (MatO, TurkO, FenO, IngO) = "
+        "Hangi dersin ortalamasini hesaplamak istiyorsunuz? (MatO, TurkO, FenO, IngO, Ort) = "
     )
 
     if secim == "MatO":
@@ -97,6 +97,23 @@ def ort():
         ) / 5
 
         print(ogrenci["Isim"], "Ingilizceden Ortalama", Ing_ort, "aldi")
+    
+    elif secim == "Ort":
+        mat1 = Mat()
+        turk1 = Turk()
+        fen1 = Fen()
+        ing1 = Ing()
+
+
+        mat_notu = ((mat1["Birinci Sinav Notu"] * 2) + (mat1["Ikinci Sinav Notu"] * 2) + mat1["Sozlu Notu"]) / 5
+        turk_notu = ((turk1["Birinci Sinav Notu"] * 2) + (turk1["Ikinci Sinav Notu"] * 2) + turk1["Sozlu Notu"]) / 5
+        fen_notu = ((fen1["Birinci Sinav Notu"] * 2) + (fen1["Ikinci Sinav Notu"] * 2) + fen1["Sozlu Notu"]) / 5
+        ing_notu = ((ing1["Birinci Sinav Notu"] * 2) + (ing1["Ikinci Sinav Notu"] * 2) + ing1["Sozlu Notu"]) / 5
+
+        ortalama = (mat_notu + turk_notu + fen_notu + ing_notu) / 4
+
+        print(ogrenci["Isim"], "Genel Ortalaması:", ortalama)
+
 
     else:
         print("Gecersiz secim!")
